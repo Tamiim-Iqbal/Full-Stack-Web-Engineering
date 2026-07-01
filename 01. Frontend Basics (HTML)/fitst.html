@@ -25,7 +25,7 @@
 
 <div class="grid">
 <div class="card">
-<h2>1. Basic Structure</h2>
+<h2>Basic Structure</h2>
 <!-- 1 -> Structure -->
 <div class="code">
 <pre>
@@ -43,9 +43,26 @@
 </div>
 </div>
 
-<!-- 2 -> : Link -->
+<!-- 2 -> Heading -->
 <div class="card">
-<h2>5. Link</h2>
+
+<h2>Headings</h2>
+<div class="tag">&lt;h1&gt;</div>
+<div class="tag">&lt;h2&gt;</div>
+<div class="tag">&lt;h3&gt;</div>
+<div class="tag">&lt;h4&gt;</div>
+<div class="tag">&lt;h5&gt;</div>
+<div class="tag">&lt;h6&gt;</div>
+<br>
+
+<div class="code">
+<p>There are six levels of headings. &lt;h1&gt; is the most important (largest), and &lt;h6&gt; is the least important (smallest).</p>
+</div>
+</div>
+
+<!-- 3 -> : Section Divisions -->
+<div class="card">
+<h2>Section Divisions</h2>
 
 <table>
 
@@ -55,32 +72,114 @@
 </tr>
 
 <tr>
-<td>&lt;a&gt;</td>
-<td>Creates a Hyperlink</td>
+<td>&lt;div&gt;</td>
+<td>Division or Section of Page Content</td>
 </tr>
 
 <tr>
-<td>href</td>
-<td>The URL that the hyperlink points to</td>
+<td>&lt;span&gt;</td>
+<td>Section of text within other content</td>
 </tr>
 
 <tr>
-<td>target</td>
-<td>Link target location:
-_self, _blank, _top, _parent</td>
+<td>&lt;br&gt;</td>
+<td>Line Break</td>
 </tr>
+
+<tr>
+<td>&lt;hr&gt;</td>
+<td>Basic Horizontal Line</td>
+</tr>
+
+</tr>
+
+
+
+</table>
+
+</div>
+
+
+<!-- 4 -> : Image -->
+<div class="card">
+<h2>Image</h2>
+
+<table>
+
+<tr>
+<th>Attribute</th>
+<th>Purpose</th>
+</tr>
+
+<tr>
+<td>&lt;img&gt;</td>
+<td>Inserts an Image</td>
+</tr>
+
+<tr>
+<td>src</td>
+<td>Image location</td>
+</tr>
+
+<tr>
+<td>alt</td>
+<td>Alternative text</td>
+</tr>
+
 </table>
 <div class="code">
-
-&lt;a href="URL" target="_blank"&gt; click me &lt;/a&gt;
-
+&lt;img src="URL" alt="" width="" height=""&gt;
 </div>
 
 </div>
 
-<!-- 3 -> :List  -->
+<!-- 5 -> Text -->
 <div class="card">
-<h2>9. Lists</h2>
+<h2>Text Formatting</h2>
+
+<table>
+
+<tr>
+<th>Attribute</th>
+<th>Purpose</th>
+</tr>
+
+<tr>
+<td>&lt;p&gt;</td>
+<td>Defines a Paragraph</td>
+</tr>
+
+<tr>
+<td>&lt;strong&gt;</td>
+<td><strong>Defines Important Text (Semantic)</strong></td>
+</tr>
+
+<tr>
+<td>&lt;em&gt;</td>
+<td><em>Defines Emphasized Text (Semantic)</em></td>
+</tr>
+
+<tr>
+<td>&lt;small&gt;</td>
+<td><small>Smaller Text</small></td>
+</tr>
+
+<tr>
+<td>&lt;u&gt;</td>
+<td><u>Underlined Text</u></td>
+</tr>
+
+<tr>
+<td>&lt;mark&gt;</td>
+<td><mark>Highlighted Text</mark></td>
+</tr>
+
+</table>
+</div>
+
+<!-- 6 -> :List  -->
+<div class="card">
+<h2>Lists</h2>
 
 
 <table>
@@ -124,26 +223,9 @@ _self, _blank, _top, _parent</td>
 </div>
 </div>
 
-<!-- 4 -> Heading -->
+<!-- 7 -> : Link -->
 <div class="card">
-
-<h2>2. Headings</h2>
-<div class="tag">&lt;h1&gt;</div>
-<div class="tag">&lt;h2&gt;</div>
-<div class="tag">&lt;h3&gt;</div>
-<div class="tag">&lt;h4&gt;</div>
-<div class="tag">&lt;h5&gt;</div>
-<div class="tag">&lt;h6&gt;</div>
-<br>
-
-<div class="code">
-<p>There are six levels of headings. &lt;h1&gt; is the most important (largest), and &lt;h6&gt; is the least important (smallest).</p>
-</div>
-</div>
-
-<!-- 5 -> : Image -->
-<div class="card">
-<h2>6. Image</h2>
+<h2>Link</h2>
 
 <table>
 
@@ -153,272 +235,33 @@ _self, _blank, _top, _parent</td>
 </tr>
 
 <tr>
-<td>&lt;img&gt;</td>
-<td>Inserts an Image</td>
+<td>&lt;a&gt;</td>
+<td>Creates a Hyperlink</td>
 </tr>
 
 <tr>
-<td>src</td>
-<td>Image location (URL / Path)</td>
+<td>href</td>
+<td>The URL that the hyperlink points to</td>
 </tr>
 
 <tr>
-<td>alt</td>
-<td>Alternative text for accessibility</td>
+<td>target</td>
+<td>Link target location:
+_self, _blank, _top, _parent</td>
 </tr>
-
 </table>
 <div class="code">
-&lt;img src="URL or Path" alt="Describe image here" width="" height=""&gt;
-</div>
 
-</div>
+&lt;a href="URL" target="_blank"&gt; click me &lt;/a&gt;
 
-<!-- 6 -> : input -->
-<div class="card">
-<h2>10. Input</h2>
-
-<table>
-
-<tr>
-<th>Attribute</th>
-<th>Purpose</th>
-</tr>
-
-<tr>
-<td>&lt;input&gt;</td>
-<td>Creates an Input Field</td>
-</tr>
-
-<tr>
-<td>type</td>
-<td>Specifies the type of input field</td>
-</tr>
-
-<tr>
-    <td>placeholder</td>
-    <td>Displays hint text inside an input field until the user types</td>
-</tr>
-</table>
-
-<div class="code">
-    &lt;input type="text" placeholder="Enter your name" name="" id=""&gt;
 </div>
 
 </div>
 
-<!-- 7 -> Text -->
-<div class="card">
-<h2>3. Text Formatting</h2>
-
-<table>
-
-<tr>
-<th>Attribute</th>
-<th>Purpose</th>
-</tr>
-
-<tr>
-<td>&lt;p&gt;</td>
-<td>Defines a Paragraph</td>
-</tr>
-
-<tr>
-<td>&lt;b&gt;</td>
-<td><b>Bold Text</b></td>
-</tr>
-
-<tr>
-<td>&lt;strong&gt;</td>
-<td><strong>Defines Important Text (Semantic)</strong></td>
-</tr>
-
-<tr>
-<td>&lt;i&gt;</td>
-<td><i>Italic Text</i></td>
-</tr>
-
-<tr>
-<td>&lt;em&gt;</td>
-<td><em>Defines Emphasized Text (Semantic)</em></td>
-</tr>
-
-<tr>
-<td>&lt;small&gt;</td>
-<td><small>Smaller Text</small></td>
-</tr>
-
-<tr>
-<td>&lt;u&gt;</td>
-<td><u>Underlined Text</u></td>
-</tr>
-
-<tr>
-<td>&lt;mark&gt;</td>
-<td><mark>Highlighted Text</mark></td>
-</tr>
-
-</table>
-</div>
-
-
-<!-- 8 -> : Media (Audio & Video) -->
-<div class="card">
-<h2>7. Media (Audio & Video)</h2>
-
-<table>
-
-<tr>
-<th>Attribute</th>
-<th>Purpose</th>
-</tr>
-
-<tr>
-<td>&lt;audio&gt;</td>
-<td>Creates an Audio Player</td>
-</tr>
-
-<tr>
-<td>&lt;video&gt;</td>
-<td>Creates a Video Player</td>
-</tr>
-
-<tr>
-<td>controls</td>
-<td>Displays audio/video controls</td>
-</tr>
-
-<tr>
-<td>src</td>
-<td>The URL of the audio/video file</td>
-</tr>
-
-
-</table>
-<div class="code">
-&lt;audio controls src="URL"&gt; &lt;/audio&gt;
-</div>
-<div class="code">
-&lt;video controls src="URL"&gt; &lt;/video&gt;
-</div>
-
-</div>
-
-<!-- 9 -> : Form -->
-<div class="card">
-<h2>11. Form</h2>
-
-<table>
-
-<tr>
-<th>Attribute</th>
-<th>Purpose</th>
-</tr>
-
-<tr>
-<td>&lt;form&gt;</td>
-<td>Creates a Form</td>
-</tr>
-
-<tr>
-<td>&lt;label&gt;</td>
-<td>Creates a label for an input field</td>
-</tr>
-
-<tr>
-    <td>&lt;fieldset&gt;</td>
-    <td>Groups related form elements</td>
-</tr>
-
-</table>
-
-<div class="code">
-
-  &lt;form&gt; <br>
-  &lt;label for="mail">Email: &lt;/label&gt;<br>
-  &lt;input type="email" &gt;<br>
-  &lt;label for="pw">Password: &lt;/label><br>
-  &lt;input type="password"&gt;<br>
-  &lt;input type="submit" value="Login"&gt;
-</div>
-
-</div>
-
-
-<!-- 10 -> : Section Divisions -->
-<div class="card">
-<h2>4. Section Divisions</h2>
-
-<table>
-
-<tr>
-<th>Attribute</th>
-<th>Purpose</th>
-</tr>
-
-<tr>
-<td>&lt;div&gt;</td>
-<td>Division or Section of Page Content</td>
-</tr>
-
-<tr>
-<td>&lt;span&gt;</td>
-<td>Section of text within other content</td>
-</tr>
-
-<tr>
-<td>&lt;br&gt;</td>
-<td>Line Break</td>
-</tr>
-
-<tr>
-<td>&lt;hr&gt;</td>
-<td>Basic Horizontal Line</td>
-</tr>
-
-</tr>
-
-
-
-</table>
-
-</div>
-
-<!-- kaj sesh : 11 -> : Table
-<div class="card">
-<h2>Table</h2>
-
-<table>
-
-<tr>
-<th>Attribute</th>
-<th>Purpose</th>
-</tr>
-
-<tr>
-<td>&lt;table&gt;</td>
-<td>Creates a Table</td>
-</tr>
-
-<tr>
-<td>&lt;tr&gt;</td>
-<td>Creates a row in the table</td>
-</tr>
-
-<tr>
-    <td>&lt;td&gt;</td>
-    <td>Defines a cell in the table</td>
-</tr>
-
-</table>
-
-
-</div> -->
-
-<!-- kaj sesh : 12 -> Semantic HTML -->
+<!-- 8 -> Semantic HTML -->
 <div class="card">
 
-<h2>8. Semantic HTML</h2>
+<h2>Semantic HTML</h2>
 <table>
 
 <tr>
@@ -459,6 +302,154 @@ _self, _blank, _top, _parent</td>
 </table>
 
 </div>
+
+<!-- 9 -> : Media (Audio & Video) -->
+<div class="card">
+<h2>Media (Audio & Video)</h2>
+
+<table>
+
+<tr>
+<th>Attribute</th>
+<th>Purpose</th>
+</tr>
+
+<tr>
+<td>&lt;audio&gt;</td>
+<td>Creates an Audio Player</td>
+</tr>
+
+<tr>
+<td>&lt;video&gt;</td>
+<td>Creates a Video Player</td>
+</tr>
+
+<tr>
+<td>controls</td>
+<td>Displays audio/video controls</td>
+</tr>
+
+<tr>
+<td>src</td>
+<td>The URL of the audio/video file</td>
+</tr>
+
+
+</table>
+<div class="code">
+&lt;audio controls src="URL"&gt; &lt;/audio&gt;
+</div>
+<div class="code">
+&lt;video controls src="URL"&gt; &lt;/video&gt;
+</div>
+
+</div>
+
+<!-- 10 -> : input -->
+<div class="card">
+<h2>Input</h2>
+
+<table>
+
+<tr>
+<th>Attribute</th>
+<th>Purpose</th>
+</tr>
+
+<tr>
+<td>&lt;input&gt;</td>
+<td>Creates an Input Field</td>
+</tr>
+
+<tr>
+<td>type</td>
+<td>Specifies the type of input field</td>
+</tr>
+
+<tr>
+    <td>placeholder</td>
+    <td>Displays hint text inside an input field until the user types</td>
+</tr>
+</table>
+
+<div class="code">
+    &lt;input type="text" placeholder="Enter your name" name="" id=""&gt;
+</div>
+
+</div>
+
+
+<!-- 11 -> : Form -->
+<div class="card">
+<h2>Form</h2>
+
+<table>
+
+<tr>
+<th>Attribute</th>
+<th>Purpose</th>
+</tr>
+
+<tr>
+<td>&lt;form&gt;</td>
+<td>Creates a Form</td>
+</tr>
+
+<tr>
+<td>&lt;label&gt;</td>
+<td>Creates a label for an input field</td>
+</tr>
+
+<tr>
+    <td>&lt;fieldset&gt;</td>
+    <td>Groups related form elements</td>
+</tr>
+
+</table>
+
+<div class="code">
+
+  &lt;form&gt; <br>
+  &lt;label for="mail">Email: &lt;/label&gt;<br>
+  &lt;input type="email" &gt;<br>
+  &lt;label for="pw">Password: &lt;/label><br>
+  &lt;input type="password"&gt;<br>
+  &lt;input type="submit" value="Login"&gt;
+</div>
+
+</div>
+
+
+<!-- 12 -> : Table
+<div class="card">
+<h2>Table</h2>
+
+<table>
+
+<tr>
+<th>Attribute</th>
+<th>Purpose</th>
+</tr>
+
+<tr>
+<td>&lt;table&gt;</td>
+<td>Creates a Table</td>
+</tr>
+
+<tr>
+<td>&lt;tr&gt;</td>
+<td>Creates a row in the table</td>
+</tr>
+
+<tr>
+    <td>&lt;td&gt;</td>
+    <td>Defines a cell in the table</td>
+</tr>
+
+</table>
+
+
+</div> -->
 
 </div>
 
