@@ -4,7 +4,7 @@
 
 ## 🎯 Milestone 1 : HTML, CSS & Github As A Beginner 
 
-<h6>1. Learn & Explore HTML - <a style="text-decoration:none" href="https://tamiim-iqbal.github.io/HTML-Cheat-Sheet/" target="_blank">HTML Cheat Sheet</a> </h6>
+<h6>1. Learn & Explore HTML - <a style="text-decoration:none" href="https://tamiim-iqbal.github.io/HTML-Cheat-Sheet/" target="_blank">HTML Cheat Sheet</a> - <a style="text-decoration:none" href="https://github.com/Tamiim-Iqbal/HTML-Cheat-Sheet" target="_blank">Repository Link</a></h6>
 
 <h6>2. Learn & Explore CSS - <a style="text-decoration:none" href="" target="_blank">CSS Notes</a> </h6>
 
