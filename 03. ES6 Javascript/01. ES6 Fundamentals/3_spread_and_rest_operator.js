@@ -2,33 +2,29 @@
 
 let numbers = [10, 20, 30, 40, 50, 2000];
 
-// console.log(...numbers);
-// console.log(10, 20, 30, 40, 50);
+console.log(numbers);          // [ 10, 20, 30, 40, 50, 2000 ]
+console.log(...numbers);       // 10 20 30 40 50 2000
 
-let maxNumber = Math.min(...numbers);
 
-// console.log(maxNumber);
+let minNumber = Math.min(...numbers);
+console.log(minNumber);       // 10
+
 let numbers2 = [...numbers, 5000, 24, 5];
 
-numbers.push(2400);
-
-// console.log(numbers2);
-
 let students = {
-  name: "Utsho",
-  age: 26,
+  name: "Tamim",
+  age: 24,
 };
 
 let students2 = { ...students, gpa: "5.00" };
 
 students.something = "test";
-
-// console.log(students2);
+console.log(students2);       // { name: 'Tamim', age: 24, gpa: '5.00' }
 
 // Rest operator
 
 function sum(a, b, c, ...restNumbers) {
-  console.log(restNumbers, "restNumbers");
+  console.log(restNumbers);         // [ 40, 50, 60, 70, 80, 90, 100 ]
   let sum = 0;
   for(let number of restNumbers){
     sum+=number;
