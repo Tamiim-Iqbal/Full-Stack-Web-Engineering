@@ -1,3 +1,4 @@
+// union
 function calculateTax (amount: number | string, taxRate: number):number{
     if(typeof amount === 'string'){
         amount = parseInt(amount);
