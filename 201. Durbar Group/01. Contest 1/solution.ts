@@ -63,3 +63,10 @@ function checkMathOperationsForNine(a: number, b: number): string {
 }
 
 // Problem 4
+function extractBodyContent(htmlString: string): string {
+  // TODO: Implement this function
+  const start = htmlString.indexOf("<body>") + "<body>".length;
+  const end = htmlString.indexOf("</body>");
+
+  return htmlString.slice(start, end);
+}
