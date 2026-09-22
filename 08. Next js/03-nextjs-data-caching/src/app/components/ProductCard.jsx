@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 const ProductCard = ({ product }) => {
@@ -11,7 +12,7 @@ const ProductCard = ({ product }) => {
                 
                 <div className="card-actions flex justify-between items-center">
                     <p className="card-text">${price.toFixed(2)}</p>
-                    <button className="btn btn-primary">Buy Now</button>
+                    <Link href={`/products/${id}`}><button className="btn btn-primary">Show Details</button></Link>
                 </div>
             </div>
         </div>
