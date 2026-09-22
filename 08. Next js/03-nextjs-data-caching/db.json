@@ -1,0 +1,70 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Wireless Headphones",
+      "price": 59.99,
+      "category": "Electronics",
+      "brand": "SoundMax",
+      "stock": 25,
+      "rating": 4.5,
+      "description": "High-quality wireless headphones with clear sound, deep bass, and a comfortable over-ear design. Perfect for music, gaming, and online meetings.",
+      "image": "https://example.com/images/headphones.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Smart Watch",
+      "price": 89.99,
+      "category": "Electronics",
+      "brand": "TechTime",
+      "stock": 18,
+      "rating": 4.3,
+      "description": "A stylish smart watch with fitness tracking, heart rate monitoring, notifications, and long-lasting battery life.",
+      "image": "https://example.com/images/smartwatch.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Running Shoes",
+      "price": 74.99,
+      "category": "Footwear",
+      "brand": "RunPro",
+      "stock": 32,
+      "rating": 4.6,
+      "description": "Lightweight and comfortable running shoes designed with breathable materials and cushioned soles for everyday workouts and running.",
+      "image": "https://example.com/images/shoes.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Laptop Backpack",
+      "price": 39.99,
+      "category": "Accessories",
+      "brand": "UrbanPack",
+      "stock": 40,
+      "rating": 4.4,
+      "description": "Durable laptop backpack with multiple compartments for laptops, books, accessories, and other daily essentials.",
+      "image": "https://example.com/images/backpack.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Mechanical Keyboard",
+      "price": 69.99,
+      "category": "Electronics",
+      "brand": "KeyMaster",
+      "stock": 15,
+      "rating": 4.7,
+      "description": "Responsive mechanical keyboard with tactile keys, a durable design, and comfortable typing experience for programmers and gamers.",
+      "image": "https://example.com/images/keyboard.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Coffee Mug",
+      "price": 14.99,
+      "category": "Home & Kitchen",
+      "brand": "DailyCup",
+      "stock": 50,
+      "rating": 4.2,
+      "description": "Classic ceramic coffee mug with a comfortable handle and durable finish. Ideal for coffee, tea, hot chocolate, and everyday use.",
+      "image": "https://example.com/images/mug.jpg"
+    }
+  ]
+}
