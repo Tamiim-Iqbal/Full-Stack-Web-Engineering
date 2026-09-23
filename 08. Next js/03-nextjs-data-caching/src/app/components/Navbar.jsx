@@ -1,7 +1,15 @@
-import React from 'react';
+'use client';
+
+// import React, { use } from 'react';
+import react from 'react';
 import Link from 'next/link';
+import { UserContext } from '../Contexts/UserContext';
+//import { UserContext } from '../Contexts/UserContext';
 
 const Navbar = () => {
+
+    // const user = use(UserContext);
+    const user = use(UserContext);
 
     const links = <>
         <li><Link href="/"> Home </Link></li>
