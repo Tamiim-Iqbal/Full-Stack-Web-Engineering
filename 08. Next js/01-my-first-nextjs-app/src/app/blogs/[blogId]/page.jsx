@@ -59,7 +59,6 @@ const blogsData = [
 ];
 
 const BlogDetailPage = async ({ params  }) => {
-
     const {blogId} = await params;
     const blog = blogsData.find(blog => blog.id === parseInt    (blogId));
 
