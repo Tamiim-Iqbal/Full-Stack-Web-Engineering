@@ -1,11 +1,11 @@
 'use client';
 import React from 'react';
 import { Button, Description, FieldError, Form, Input, Label, TextField } from "@heroui/react";
-import { signUp } from '@/lib/auth-client';
+import { signIn, signUp } from '@/lib/auth-client';
 
 const SignupPage = () => {
 
-    const onSubmit = async(e) => {
+    const onSubmit = async (e) => {
         e.preventDefault();
         const formData = new FormData(e.currentTarget);
         // Convert FormData to plain object
@@ -13,81 +13,95 @@ const SignupPage = () => {
         console.log('Form Data:', data);
 
         // Here you can call your signUp function from authClient
-        const {data: resData, error} = await signUp.email({
-            name: data.name, 
-            email: data.email, 
+        const { data: resData, error } = await signUp.email({
+            name: data.name,
+            email: data.email,
             password: data.password
         });
 
-        console.log('Sign Up Response:', resData, error);
-        
+        console.log('After Response:', resData, error);
+
     };
+
+    const handleGoogleSignUp = async () => {
+        const resData = await signIn.social({
+            provider: 'google',
+        });
+
+        console.log('Google Sign Up Response:', resData);
+    }
+    const handleGithubSignUp = async () => {
+        const resData = await signIn.social({
+            provider: 'github',
+        });
+
+        console.log('Github Sign Up Response:', resData);
+    }
 
     return (
         <div>
             <Form className="flex w-96 flex-col gap-4" onSubmit={onSubmit}>
                 <TextField
-            isRequired
-            name="name"
-            validate={(value) => {
-              if (value.length < 3) {
-                return "Name must be at least 3 characters";
-              }
-              return null;
-            }}
-          >
-            <Label>Name</Label>
-            <Input placeholder="John Doe" />
-            <FieldError />
-          </TextField>
-            <TextField
-                isRequired
-                name="email"
-                type="email"
-                validate={(value) => {
-                    if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(value)) {
-                        return "Please enter a valid email address";
-                    }
-                    return null;
-                }}
-            >
-                <Label>Email</Label>
-                <Input placeholder="your email" />
-                <FieldError />
-            </TextField>
-            <TextField
-                isRequired
-                minLength={8}
-                name="password"
-                type="password"
-                validate={(value) => {
-                    if (value.length < 8) {
-                        return "Password must be at least 8 characters";
-                    }
-                    if (!/[A-Z]/.test(value)) {
-                        return "Password must contain at least one uppercase letter";
-                    }
-                    if (!/[0-9]/.test(value)) {
-                        return "Password must contain at least one number";
-                    }
-                    return null;
-                }}
-            >
-                <Label>Password</Label>
-                <Input placeholder="Enter your password" />
-                <Description>Must be at least 8 characters with 1 uppercase and 1 number</Description>
-                <FieldError />
-            </TextField>
-            <div className="flex gap-2">
-                <Button type="submit">
-                    
-                    Submit
-                </Button>
-                <Button type="reset" variant="secondary">
-                    Reset
-                </Button>
-            </div>
-        </Form>
+                    isRequired
+                    name="name"
+                    validate={(value) => {
+                        if (value.length < 3) {
+                            return "Name must be at least 3 characters";
+                        }
+                        return null;
+                    }}
+                >
+                    <Label>Name</Label>
+                    <Input placeholder="John Doe" />
+                    <FieldError />
+                </TextField>
+                <TextField
+                    isRequired
+                    name="email"
+                    type="email"
+                    validate={(value) => {
+                        if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(value)) {
+                            return "Please enter a valid email address";
+                        }
+                        return null;
+                    }}
+                >
+                    <Label>Email</Label>
+                    <Input placeholder="your email" />
+                    <FieldError />
+                </TextField>
+                <TextField
+                    isRequired
+                    minLength={8}
+                    name="password"
+                    type="password"
+                    validate={(value) => {
+                        if (value.length < 8) {
+                            return "Password must be at least 8 characters";
+                        }
+                        if (!/[A-Z]/.test(value)) {
+                            return "Password must contain at least one uppercase letter";
+                        }
+                        if (!/[0-9]/.test(value)) {
+                            return "Password must contain at least one number";
+                        }
+                        return null;
+                    }}
+                >
+                    <Label>Password</Label>
+                    <Input placeholder="Enter your password" />
+                    <Description>Must be at least 8 characters with 1 uppercase and 1 number</Description>
+                    <FieldError />
+                </TextField>
+                <div className="flex gap-2">
+                    <Button type="submit"> Submit </Button>
+                    <Button type="reset" variant="secondary"> Reset </Button>
+                </div>
+            </Form>
+
+            <p>Or</p>
+            <Button onClick={handleGoogleSignUp}>Sign up with Google</Button>
+            <Button onClick={handleGithubSignUp}>Sign up with Github</Button>
         </div>
     );
 };

@@ -3,6 +3,7 @@ import React from 'react';
 import { Button, Description, FieldError, Form, Input, InputGroup, Label, TextField } from "@heroui/react";
 import { signIn } from '@/lib/auth-client';
 import { Eye, EyeSlash } from "@gravity-ui/icons";
+import Link from 'next/link';
 
 import { useState } from 'react';
 
@@ -22,10 +23,11 @@ const SignInPage = () => {
         });
         console.log('Sign In Response:', signInData, signInError);
 
-        
+
     };
     return (
-        <Form className="flex w-96 flex-col gap-4" onSubmit={onSubmit}>
+        <div>
+            <Form className="flex w-96 flex-col gap-4" onSubmit={onSubmit}>
             <TextField
                 isRequired
                 name="email"
@@ -41,32 +43,10 @@ const SignInPage = () => {
                 <Input placeholder="john@example.com" />
                 <FieldError />
             </TextField>
-            <TextField className="w-full max-w-[280px]" name="password">
-                <Label>Password</Label>
-                <InputGroup>
-                    <InputGroup.Input
-                        className="w-full max-w-[280px]"
-                        type={isVisible ? "text" : "password"}
-                        
-                    />
-                    <InputGroup.Suffix className="pe-0">
-                        <Button
-                            isIconOnly
-                            aria-label={isVisible ? "Hide password" : "Show password"}
-                            size="sm"
-                            variant="ghost"
-                            onPress={() => setIsVisible(!isVisible)}
-                        >
-                            {isVisible ? <Eye className="size-4" /> : <EyeSlash className="size-4" />}
-                        </Button>
-                    </InputGroup.Suffix>
-                </InputGroup>
-            </TextField>
             <TextField
                 isRequired
                 minLength={8}
                 name="password"
-                type="password"
                 validate={(value) => {
                     if (value.length < 8) {
                         return "Password must be at least 8 characters";
@@ -81,20 +61,46 @@ const SignInPage = () => {
                 }}
             >
                 <Label>Password</Label>
-                <Input placeholder="Enter your password" />
-                <Description>Must be at least 8 characters with 1 uppercase and 1 number</Description>
+
+                <InputGroup>
+                    <InputGroup.Input
+                        className="w-full max-w-[280px]"
+                        type={isVisible ? "text" : "password"}
+                        placeholder="Enter your password"
+                    />
+
+                    <InputGroup.Suffix className="pe-0">
+                        <Button
+                            isIconOnly
+                            aria-label={isVisible ? "Hide password" : "Show password"}
+                            size="sm"
+                            variant="ghost"
+                            onPress={() => setIsVisible(!isVisible)}
+                        >
+                            {isVisible ? (
+                                <Eye className="size-4" />
+                            ) : (
+                                <EyeSlash className="size-4" />
+                            )}
+                        </Button>
+                    </InputGroup.Suffix>
+                </InputGroup>
+
+                <Description>
+                    Must be at least 8 characters with 1 uppercase and 1 number
+                </Description>
+
                 <FieldError />
             </TextField>
             <div className="flex gap-2">
-                <Button type="submit">
-                    Submit
-                </Button>
-                <Button type="reset" variant="secondary">
-                    Reset
-                </Button>
+                <Button type="submit"> Submit</Button>
+                <Button type="reset" variant="secondary"> Reset</Button>
             </div>
         </Form>
 
+        <p><small>Forgot Password? 
+             <Link className="text-blue-500 underline" href="/forgot-password">Click here</Link></small></p>
+        </div>
     );
 };
 
