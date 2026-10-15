@@ -1,6 +1,11 @@
 import express from 'express';
+import cors from 'cors';
 const app = express();
 const PORT = process.env.PORT || 5001;  // windows: 5000, mac: 5001 
+
+app.use(cors());  
+app.use(express.json());  // Middleware to parse JSON request bodies  
+
 
 app.get('/', (req, res) => {
   res.send('Hello World from Express.js!');
@@ -15,6 +20,15 @@ const users = [
 
 app.get('/users', (req, res) => {
   res.json(users);
+});
+
+app.post('/users', (req, res) => {
+    console.log('Data from the client:', req.body);
+    const newUser = req.body;
+    // Temporary data storage (Future: Use a database for persistent storage)
+    newUser.id = users.length + 1; // Assign a new ID to the user
+    users.push(newUser);
+    res.send({success: true, message: 'User created successfully!'});
 });
 
 app.get('/about', (req, res) => {
